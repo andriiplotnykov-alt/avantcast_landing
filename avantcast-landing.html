@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07061A">
+<title>Avantcast — Your money has a future. Make a plan for it.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07061A;--tx:#F4F1FF;--mu:#BDB6DC;--lb:#C9BCFF;--er:#FFB3C0;--ln:rgba(255,255,255,.16);--edge:linear-gradient(135deg,rgba(255,255,255,.62),rgba(170,185,255,.2) 30%,rgba(140,110,230,.12) 62%,rgba(205,185,255,.45));--r1:28px;--r2:18px;--r3:12px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:96px;background:var(--bg);color-scheme:dark}
+body{margin:0;color:var(--tx);font:400 17px/1.6 Inter,system-ui,sans-serif;background:var(--bg);overflow-x:hidden}
+.sky{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55vw 55vw at 8% 6%,rgba(70,100,255,.42),transparent 70%),radial-gradient(50vw 50vw at 92% 24%,rgba(140,90,240,.46),transparent 70%),radial-gradient(60vw 45vw at 30% 100%,rgba(100,70,220,.4),transparent 70%),radial-gradient(30vw 30vw at 88% 90%,rgba(190,60,160,.2),transparent 70%),radial-gradient(1px 1px at 12% 20%,#fff,transparent),radial-gradient(1px 1px at 70% 12%,#cfd8ff,transparent),radial-gradient(1.5px 1.5px at 40% 78%,#fff,transparent),radial-gradient(1px 1px at 88% 60%,#e7c9ff,transparent),linear-gradient(#0A0826,#07061A)}
+h1,h2,h3,.lg span{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em;margin:0;color:#fff;line-height:1.08}
+h1{font-size:clamp(38px,5.4vw,64px);line-height:1.04}h2{font-size:clamp(30px,4vw,46px)}h3{font-size:clamp(21px,2.2vw,26px);line-height:1.2}
+p{margin:0}a{color:inherit}.mu{color:var(--mu)}.sm{font-size:13.5px}.lb{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--lb);margin:0 0 14px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.w{position:relative;max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
+section{position:relative;padding:clamp(72px,10vw,130px) 0}
+section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(640px 420px at var(--gx,6%) 50%,rgba(110,90,235,.2),transparent 70%)}
+section:nth-of-type(even){--gx:94%}
+.gl{position:relative;border-radius:var(--r1);background:linear-gradient(115deg,transparent 28%,rgba(255,255,255,.07) 42%,rgba(190,170,255,.09) 52%,transparent 66%),linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035) 55%,rgba(120,100,230,.08));backdrop-filter:blur(24px) saturate(1.6);-webkit-backdrop-filter:blur(24px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -30px 60px rgba(120,100,235,.08),0 20px 50px rgba(3,2,16,.45)}
+.gl::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--edge);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.bt{font:600 15px Inter,sans-serif;min-height:48px;padding:0 24px;border-radius:999px;border:0;cursor:pointer;white-space:nowrap;color:#0B0820;background:linear-gradient(115deg,#F4F1FF,#A9B8FF 28%,#C3A9FF 55%,#F2C4F0 80%,#F4F1FF);box-shadow:inset 0 1px 0 #fff,inset 0 -6px 12px rgba(91,60,200,.25),0 8px 28px rgba(120,90,240,.4);transition:transform .15s,filter .15s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.bt:hover{filter:brightness(1.08);transform:translateY(-1px)}.bt.sm{min-height:40px;padding:0 18px;font-size:14px}
+.bt:disabled{opacity:.55;cursor:not-allowed;transform:none}.bt.ld::after{content:"";width:16px;height:16px;border:2px solid #0B0820;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+:is(a,button,input,textarea,summary):focus-visible{outline:2px solid #fff;outline-offset:3px}
+.in{width:100%;height:48px;border-radius:var(--r3);border:1px solid rgba(255,255,255,.26);background:rgba(7,6,26,.5);color:var(--tx);padding:0 16px;font:16px Inter,sans-serif}
+textarea.in{height:110px;padding:12px 16px;resize:vertical}.in::placeholder{color:#9E96C4}.in:focus{border-color:#A9B8FF;box-shadow:0 0 0 3px rgba(169,184,255,.25);outline:0}.in[aria-invalid=true]{border-color:var(--er)}
+.er{min-height:20px;font-size:14px;color:var(--er);margin:6px 4px 0}
+.f{display:flex;gap:8px;padding:8px;border-radius:999px;max-width:560px}.f .in{border:0;background:transparent;height:48px}.f .in:focus{box-shadow:none}
+header{position:sticky;top:0;z-index:20;padding:14px clamp(14px,3vw,40px) 0}
+.hb{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 20px;border-radius:999px;transition:background .2s}
+header.s .hb{background:rgba(14,10,38,.88)}
+.lg{display:flex;align-items:center;gap:10px;text-decoration:none}.lg span{font-size:21px;font-weight:700}
+nav{display:flex;align-items:center;gap:26px;font-size:15px}nav a:not(.bt){text-decoration:none;color:var(--mu)}nav a:not(.bt):hover{color:#fff}
+#mb{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
+.lang{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.07);color:#fff;border-radius:999px;padding:9px 12px;font:600 12px Inter;cursor:pointer}
+#top{padding-top:clamp(36px,6vw,80px)}.hg{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,4vw,64px);align-items:center;position:relative}
+.hg::before{content:"";position:absolute;right:0;top:-12%;width:min(540px,62vw);aspect-ratio:1;border-radius:50%;z-index:-1;background:conic-gradient(from 200deg,#4a63ff,#8d6be0,#dccfff,#6f56e8,#4a63ff);filter:blur(64px);opacity:.5}
+.hg h1{margin-bottom:22px}.sub{font:500 clamp(19px,2vw,23px)/1.35 "Space Grotesk",sans-serif;color:#fff;margin-bottom:14px}.hg .mu{max-width:520px}
+.fl{margin:30px 0 10px;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--lb)}
+.db{padding:22px}.db .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.bd{font-size:11.5px;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.3);color:#E3DCFF;white-space:nowrap}
+.pv{position:relative;background:rgba(8,6,30,.5);border:0;border-radius:var(--r2);padding:16px;font-size:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
+.pt{font:600 13px Inter;color:var(--lb);margin-bottom:10px}.k small{display:block;color:var(--mu);font-size:12px}.k b{font:700 22px "Space Grotesk";color:#fff}
+.kr{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:12px;margin-bottom:6px}.kb b{font-size:32px}
+.g div{display:flex;justify-content:space-between;font-size:13px}.g i{display:block;height:6px;border-radius:9px;background:rgba(255,255,255,.14);margin:5px 0 11px}.g u{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#7C94FF,#B9A6FF 65%,#E9E4FF)}
+.rw{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid rgba(255,255,255,.12);font-size:13.5px}
+.ch{width:100%;height:auto;display:block;margin-top:8px}.chips{display:flex;gap:6px}.chip{font:600 12px Inter;color:#E3DCFF;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:5px 12px;cursor:pointer}.chip[aria-pressed=true]{background:#E9E4FF;color:#0B0820}
+.sl{width:100%;accent-color:#B691FF}.doc{display:flex;gap:12px;align-items:center;margin-bottom:10px}.tg{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:99px;background:rgba(182,145,255,.25);color:#EFE8FF;border:1px solid rgba(182,145,255,.5)}
+.pg{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}.pg h2{margin-bottom:20px}.ar{display:grid;gap:18px;margin-top:30px}.ar>div{display:flex;gap:16px}.ar h3{font-size:19px;margin-bottom:2px}
+.ic{flex:none;width:44px;height:44px;border-radius:var(--r3);display:grid;place-items:center;color:#E9E4FF;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
+.cp{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cp .gl{padding:20px}.cp h3{font-size:16px;font-family:Inter;letter-spacing:.08em;margin-bottom:4px}
+.hd2{max-width:760px;margin-bottom:56px}.hd2 h2{margin-bottom:18px}
+.tl{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.tl::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:linear-gradient(90deg,#5B7CFF,#8D6BE0,#E9E4FF);box-shadow:0 0 14px rgba(141,107,224,.7);transform-origin:left;transition:transform 1.4s ease}
+html.js .tl:not(.in)::before{transform:scaleX(0)}.st{position:relative}.nd{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 17px "Space Grotesk";color:#0B0820;background:linear-gradient(135deg,#F4F1FF,#A9B8FF 45%,#C3A9FF);box-shadow:0 0 0 6px var(--bg),0 0 22px rgba(141,107,224,.7);margin-bottom:24px}
+.st h3{margin-bottom:10px}.st>p{margin-bottom:22px}
+.bg{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}.cd{position:relative;padding:26px;display:flex;flex-direction:column;gap:6px;transition:transform .2s}.cd:hover{transform:translateY(-4px)}.cd .pv,.cd>p.mu{margin-top:8px}.cd .pv{margin-top:auto}.cd>p.mu{margin-bottom:12px}
+.ov{position:absolute;inset:0;border:0;background:none;border-radius:var(--r1);cursor:pointer;z-index:2}.go{position:absolute;top:22px;right:22px;font-size:13px;font-weight:600;color:#E3DCFF;z-index:1}
+.c1{grid-column:span 7;grid-row:span 2}.c2{grid-column:span 5}.c3{grid-column:span 5}.c4{grid-column:span 5}.c5{grid-column:span 7}.nt{margin-top:22px;text-align:center}
+.hw{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.hw .gl{padding:26px;display:flex;flex-direction:column;gap:10px}.hw .nd{margin-bottom:8px;box-shadow:0 0 18px rgba(141,107,224,.6)}.hw .pv{margin:8px 0 6px}.hw .bt{align-self:flex-start;margin-top:auto}
+.bs{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.3)}
+.cta{text-align:center;padding:clamp(36px,6vw,72px) clamp(20px,5vw,64px)}.cta h2{margin-bottom:16px}.cta .mu{max-width:640px;margin:0 auto 28px}.cta .f{margin:0 auto}.cta .er{text-align:center}
+footer{border-top:1px solid var(--ln);padding:56px 0 40px;background:rgba(8,6,30,.4);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.fg{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:32px}.fg h3{font:600 14px Inter;color:#fff;letter-spacing:0;margin-bottom:12px}.fg a{display:block;color:var(--mu);text-decoration:none;padding:4px 0}.fg a:hover{color:#fff;text-decoration:underline}.fg p{max-width:300px;margin-top:14px}.cr{margin-top:40px;padding-top:20px;border-top:1px solid var(--ln)}
+dialog{border:0;padding:0;background:none;color:var(--tx);width:min(560px,calc(100vw - 28px));max-height:calc(100dvh - 28px);overflow:visible}dialog.wide{width:min(780px,calc(100vw - 28px))}dialog[open]{animation:pop .22s ease}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}dialog::backdrop{background:rgba(4,3,14,.76);backdrop-filter:blur(7px)}
+.dc{position:relative;border-radius:28px;padding:34px;background:rgba(18,13,48,.96);max-height:calc(100dvh - 28px);overflow:auto;display:grid;gap:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 30px 80px rgba(0,0,0,.6);border:1px solid rgba(169,184,255,.4)}
+.dc h2{font-size:28px;padding-right:36px}.dc label{display:grid;gap:6px;font-size:14px;font-weight:500}.dc form{display:grid;gap:10px}.dc h3{font-size:17px;margin-top:6px}
+.x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer}.x:hover{background:rgba(255,255,255,.2)}
+.hp{position:absolute;left:-9999px}.ok{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#F4F1FF,#A9B8FF 50%,#C3A9FF);color:#0B0820}
+.sb{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);font-size:14px;word-break:break-all}
+.community{padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(125,95,230,.2),rgba(255,255,255,.05));border:1px solid rgba(190,170,255,.25);display:grid;gap:10px}
+.discord{width:100%;text-decoration:none}.success-actions{display:grid;gap:10px}
+#ts{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;padding:12px 20px;border-radius:999px;background:#E9E4FF;color:#0B0820;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}#ts.on{opacity:1}
+#loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 42%,rgba(103,78,205,.3),transparent 45%),#07061A;transition:opacity .65s ease,visibility .65s ease}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}.load-inner{display:grid;justify-items:center;gap:22px}.load-mark{width:76px;height:76px;filter:drop-shadow(0 0 22px rgba(157,130,255,.65));animation:float 2s ease-in-out infinite}.load-ring{position:absolute;width:112px;height:112px;border:1px solid rgba(195,169,255,.2);border-top-color:#C3A9FF;border-radius:50%;animation:spin 1.5s linear infinite}.load-logo{font:700 25px "Space Grotesk";letter-spacing:-.04em}.load-caption{font-size:11px;letter-spacing:.2em;color:#BDB6DC}.load-track{width:150px;height:2px;background:rgba(255,255,255,.12);overflow:hidden;border-radius:5px}.load-track::after{content:"";display:block;width:42%;height:100%;background:linear-gradient(90deg,#6C86FF,#E9E4FF);animation:progress 1.3s ease-in-out infinite}
+@keyframes progress{from{transform:translateX(-110%)}to{transform:translateX(260%)}}@keyframes float{50%{transform:translateY(-6px)}}
+@media(max-width:1000px){.hg,.pg{grid-template-columns:1fr}.hw{grid-template-columns:1fr}.bg{grid-template-columns:1fr 1fr}.c1{grid-column:1/-1;grid-row:auto}.c2,.c3,.c4,.c5{grid-column:auto}.c5{grid-column:1/-1}.fg{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){#mb{display:grid;place-items:center}nav{position:absolute;top:calc(100% + 8px);left:clamp(14px,3vw,40px);right:clamp(14px,3vw,40px);flex-direction:column;align-items:stretch;gap:4px;padding:16px;border-radius:24px;background:rgba(14,10,38,.97);border:1px solid rgba(169,184,255,.35);display:none}header.o nav{display:flex}nav a:not(.bt){padding:12px 8px;font-size:17px}nav .bt{height:48px}.hb{position:relative}.tl{grid-template-columns:1fr;gap:40px;padding-left:64px}.tl::before{left:21px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(#5B7CFF,#8D6BE0,#E9E4FF);transform-origin:top}html.js .tl:not(.in)::before{transform:scaleY(0)}.nd{position:absolute;left:-64px;top:0;margin:0}.hw .nd{position:relative;left:auto;top:auto}.bg,.cp{grid-template-columns:1fr}.c5{grid-column:auto}.f{flex-direction:column;border-radius:24px}.f .in{border:1px solid rgba(255,255,255,.3);background:rgba(7,6,26,.65);padding:0 16px}.f .bt{width:100%;height:52px}.dc{padding:26px 20px}.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="loader" aria-label="Loading Avantcast">
+  <div class="load-inner">
+    <div style="position:relative;width:112px;height:112px;display:grid;place-items:center">
+      <div class="load-ring"></div>
+      <svg class="load-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 58 32 8 46.1 40" fill="none" stroke="#C3B2FF" stroke-width="7"/><path d="M46.1 40 54 58" fill="none" stroke="#E68BC8" stroke-width="7"/></svg>
+    </div>
+    <div class="load-logo">Avantcast</div><div class="load-caption">YOUR FINANCIAL FUTURE</div><div class="load-track"></div>
+  </div>
+</div>
+<div class="sky" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="ma" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#b9a3ff"/><stop offset=".38" stop-color="#4a33a8"/><stop offset=".55" stop-color="#a58bff"/><stop offset=".7" stop-color="#f3eaff"/><stop offset="1" stop-color="#7a5ce0"/></linearGradient>
+<linearGradient id="mb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd0ea"/><stop offset=".45" stop-color="#e0489a"/><stop offset=".75" stop-color="#8a2060"/><stop offset="1" stop-color="#ff8fc8"/></linearGradient>
+<symbol id="mark" viewBox="0 0 64 64"><path d="M10 58 32 8 46.1 40" fill="none" stroke="url(#ma)" stroke-width="7"/><path d="M46.1 40 54 58" fill="none" stroke="url(#mb)" stroke-width="7"/></symbol>
+</defs></svg>
+<header id="hd"><div class="gl hb">
+  <a class="lg" href="#top" aria-label="Avantcast, back to top"><svg width="30" height="30" style="filter:drop-shadow(0 0 6px rgba(141,107,224,.7))"><use href="#mark"/></svg><span>Avantcast</span></a>
+  <nav id="nv" aria-label="Main navigation"><a href="#platform">Product</a><a href="#how">How it works</a><a href="#about" data-o="about">About</a><button class="lang" id="lang" type="button" aria-label="Switch language">FR</button><a class="bt sm" href="#join" data-j>Join Early</a></nav>
+  <button id="mb" aria-expanded="false" aria-controls="nv" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main>
+<section id="top"><div class="w hg" id="join">
+  <div><p class="lb">PERSONAL FINANCE · REIMAGINED</p><h1>Your money has a future. Make a plan for it.</h1>
+    <p class="sub">Understand where you stand. Explore where you could go.</p>
+    <p class="mu">Bring your financial picture together, explore possible outcomes and build a plan around your own goals.</p>
+    <p class="fl">GET EARLY ACCESS</p><div data-wl="h"></div>
+    <p class="mu sm" style="margin-top:6px">No commitment. Early access updates. <a href="#privacy" data-o="privacy">Privacy Policy</a></p>
+  </div><div class="gl db" id="dash"></div>
+</div></section>
+<section id="problem"><div class="w pg">
+  <div><p class="lb">THE PROBLEM</p><h2>Knowing where your money goes is only half the picture.</h2>
+    <p class="mu" style="font-size:18px">Tracking your expenses can tell you what happened. But understanding your financial position means looking at the bigger picture — what you own, what you owe and how your wealth is evolving.</p><div class="ar" id="args"></div>
+  </div>
+  <div class="cp"><div class="gl"><h3>TRACKING</h3><p class="mu sm" style="margin-bottom:12px">Transactions · Spending categories · Monthly activity</p><div id="p-tr"></div></div>
+    <div class="gl"><h3>FINANCIAL PICTURE</h3><p class="mu sm" style="margin-bottom:12px">Financial position · Wealth evolution · Future scenarios</p><div id="p-fp"></div></div>
+  </div>
+</div></section>
+<section id="approach"><div class="w"><div class="hd2"><p class="lb">THE APPROACH</p><h2>Understand where you stand. Explore where you could go.</h2><p class="mu" style="font-size:18px">A clearer financial picture is the starting point. From there, explore possible outcomes, define your priorities and adjust your plan as life changes.</p></div><div class="tl" id="tl"></div></div></section>
+<section id="platform"><div class="w"><div class="hd2"><p class="lb">THE PLATFORM</p><h2>Everything you need to plan ahead.</h2><p class="mu" style="font-size:18px">Five connected capabilities. One clearer financial picture.</p></div><div class="bg" id="bento"></div><p class="mu sm nt">Illustrative interface and data. Not a representation of a live account.</p></div></section>
+<section id="how"><div class="w"><div class="hd2"><p class="lb">HOW IT WORKS</p><h2>Your financial picture, step by step.</h2><p class="mu" style="font-size:18px">Build your financial profile, explore what your numbers could mean and keep your plan aligned with your goals.</p></div><div class="hw" id="hw"></div></div></section>
+<section id="early"><div class="w"><div class="gl cta"><p class="lb">EARLY ACCESS</p><h2>Start planning ahead.</h2><p class="mu" style="font-size:18px">Get early access to Avantcast and discover a more structured way to understand your finances, explore your possibilities and plan your next steps.</p><div data-wl="c"></div><p class="mu sm" style="margin-top:6px">Be among the first to discover Avantcast.</p></div></div></section>
+</main>
+<footer><div class="w"><div class="fg">
+  <div><a class="lg" href="#top" style="padding:0"><svg width="28" height="28"><use href="#mark"/></svg><span>Avantcast</span></a><p class="mu">A more structured approach to personal finance and long-term planning.</p></div>
+  <div><h3>Product</h3><a href="#platform">Platform</a><a href="#how">How it works</a></div>
+  <div><h3>Company</h3><a href="#about" data-o="about">About</a><a href="#contact" data-o="contact">Contact</a></div>
+  <div><h3>Legal</h3><a href="#privacy" data-o="privacy">Privacy Policy</a><a href="#terms" data-o="terms">Terms</a></div>
+</div><p class="cr mu sm">© 2026 Avantcast. All rights reserved.</p></div></footer>
+<dialog id="dlg" aria-labelledby="dt"><div class="gl dc" id="dc"></div></dialog><div id="ts" role="status" aria-live="polite"></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="./fr.js"></script>
+<script>
+(() => {
+'use strict';
+const firebaseConfig={apiKey:"AIzaSyDE0RbBvSySYuW5u_WLexyYyYVzX6NcgxY",authDomain:"avantcast-8b199.firebaseapp.com",projectId:"avantcast-8b199",storageBucket:"avantcast-8b199.firebasestorage.app",messagingSenderId:"908439235798",appId:"1:908439235798:web:2f869ddfa034d4c1a32d77",measurementId:"G-80ZYT71CJK"};
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+document.documentElement.classList.add('js');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const EM=x=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(x),wait=t=>new Promise(r=>setTimeout(r,t));
+let db=null;
+try{if(window.firebase){firebase.initializeApp(firebaseConfig);db=firebase.firestore();}}catch(err){console.error('Firebase initialization:',err);}
+let lang='en';
+const dict=()=>window.AVANTCAST_FR||{};
+const originalText=new WeakMap(),originalAttrs=new WeakMap();
+function translateTree(root=document){
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    if(!originalText.has(node))originalText.set(node,node.nodeValue);
+    const original=originalText.get(node),trim=original.trim();
+    node.nodeValue=lang==='fr'&&dict()[trim]?original.replace(trim,dict()[trim]):original;
+  });
+  const attrs=['placeholder','aria-label','title'];
+  const elements=[];
+  if(root.nodeType===Node.ELEMENT_NODE)elements.push(root);
+  root.querySelectorAll?.('*').forEach(el=>elements.push(el));
+  elements.forEach(el=>attrs.forEach(attr=>{
+    const value=el.getAttribute(attr);if(value===null)return;
+    let saved=originalAttrs.get(el);if(!saved){saved={};originalAttrs.set(el,saved);}
+    if(!(attr in saved))saved[attr]=value;
+    const original=saved[attr];
+    el.setAttribute(attr,lang==='fr'?(dict()[original]||original):original);
+  }));
+}
+let translating=false;
+const observer=new MutationObserver(records=>{
+  if(translating)return;
+  translating=true;
+  records.forEach(record=>record.addedNodes.forEach(node=>{
+    if(node.nodeType===Node.ELEMENT_NODE||node.nodeType===Node.DOCUMENT_FRAGMENT_NODE)translateTree(node);
+    else if(node.nodeType===Node.TEXT_NODE)translateTree(node.parentElement||document);
+  }));
+  translating=false;
+});
+observer.observe(document.body,{childList:true,subtree:true});
+function setLanguage(next){
+  lang=next;document.documentElement.lang=lang;$('#lang').textContent=lang==='en'?'FR':'EN';
+  translateTree(document.body);
+}
+$('#lang').addEventListener('click',()=>setLanguage(lang==='en'?'fr':'en'));
+/* Illustrative previews */
+const H=[22,26,25,31,36,40,44,49,52,58],P=[64,70,77,84];
+const chart=(h,p=[],q=[])=>{const w=240,ht=90,n=h.length+p.length-1||1,X=i=>i*w/Math.max(n-1,1),Y=v=>ht-4-v*(ht-12)/100,pt=(a,o)=>a.map((v,i)=>(i?'L':'M')+X(i+o).toFixed(1)+' '+Y(v).toFixed(1)).join(''),o=h.length-1,path=pt(h,0);return `<svg viewBox="0 0 ${w} ${ht}" class="ch" role="img" aria-label="Illustrative chart"><path d="${path}L${X(o)} ${ht}L0 ${ht}Z" fill="rgba(143,166,255,.16)"/><path d="${path}" fill="none" stroke="#9FB2FF" stroke-width="2.4"/>${p.length?`<path d="${pt([h[h.length-1],...p],o)}" fill="none" stroke="#F2B8F5" stroke-width="2.4" stroke-dasharray="5 5"/>`:''}${q.length?`<path d="${pt([h[h.length-1],...q],o)}" fill="none" stroke="#7FE3E8" stroke-width="2.4" stroke-dasharray="2 5"/>`:''}</svg>`;};
+const kpi=(l,v,c='')=>`<div class="k ${c}"><small>${l}</small><b>${v}</b></div>`;
+const bar=(l,v,p)=>`<div class="g"><div><span>${l}</span><span>${v}</span></div><i><u style="width:${p}%"></u></i></div>`;
+const rw=(a,b)=>`<div class="rw"><span>${a}</span><span>${b}</span></div>`;
+const V={
+tr:()=>`<div class="pv"><div class="pt">Spending this month</div>${bar('Housing','€950',70)}${bar('Food','€420',34)}${bar('Transport','€130',12)}${rw('Groceries','−€64')}${rw('Transit pass','−€38')}</div>`,
+fp:()=>`<div class="pv"><div class="kr">${kpi('Net Worth','€34,300')}${kpi('Income','€2,400')}</div>${chart(H,P)}<p class="mu sm">Past (solid) and projected (dashed)</p></div>`,
+fs:()=>`<div class="pv"><div class="kr">${kpi('Assets','€42,500')}${kpi('Liabilities','€8,200')}${kpi('Net Worth','€34,300')}</div>${rw('Income','€2,400 / mo')}${rw('Expenses','€1,500 / mo')}${rw('Savings rate','Illustrative')}</div>`,
+an:(interactive=false)=>`<div class="pv an"><div class="top" style="display:flex;justify-content:space-between;align-items:center">${kpi('Illustrative net worth','€34.3k')}<div class="chips" role="group" aria-label="Period">${[1,3,5].map(y=>interactive?`<button class="chip" data-per="${y}" aria-pressed="${y===5}">${y}Y</button>`:`<span class="chip" aria-hidden="true">${y}Y</span>`).join('')}</div></div><div class="cw">${chart(H)}</div></div>`,
+sc:(interactive=false)=>`<div class="pv sc"><div class="pt">WHAT IF?</div><div style="display:flex;justify-content:space-between"><span>Monthly savings</span><b id="sv">€500</b></div>${interactive?'<input class="sl" id="sl" type="range" min="100" max="1000" step="50" value="500" aria-label="Monthly savings">':'<div class="g" style="margin:8px 0 0"><i><u style="width:44%"></u></i></div>'}<div class="cw" id="sw">${chart(H,P,[60,63,66,69])}</div><p class="mu sm" id="sn">Illustrative projections based on your assumptions: two scenarios compared.</p></div>`,
+go:()=>`<div class="pv"><div class="pt">3 goals — Illustrative example</div>${bar('Emergency fund · €6,000','62%',62)}${bar('Home deposit · €30,000','28%',28)}${bar('Trip · €2,500','80%',80)}</div>`,
+si:()=>`<div class="pv"><div class="doc"><svg width="34" height="42" viewBox="0 0 34 42" fill="none" stroke="#C9BCFF" stroke-width="2"><path d="M4 2h18l8 8v30H4z"/><path d="M22 2v8h8M10 20h14M10 27h14M10 34h8"/></svg><div><b>statement.pdf</b><br><span class="tg">Processing complete</span></div></div>${rw('Salary','€2,400')}${rw('Rent','−€950')}<p class="mu sm" style="margin-top:8px">OCR-powered document input · ready to review</p></div>`,
+pf:()=>`<div class="pv"><div class="pt">Your profile</div>${rw('Income','€2,400 / mo')}${rw('Expenses','€1,500 / mo')}${rw('Assets','€42,500')}${rw('Liabilities','€8,200')}</div>`,
+pa:()=>`<div class="pv"><div class="pt">Planned vs. observed</div>${chart(H)}${bar('Emergency fund','62%',62)}${bar('Home deposit','28%',28)}</div>`
+};
+$('#dash').innerHTML=`<div class="top"><b style="font:600 17px 'Space Grotesk'">Financial Overview</b><span class="bd">Preview · Illustrative data</span></div><div class="pv"><div class="kr">${kpi('Net Worth','€34,300','kb')}</div><div class="kr">${kpi('Assets','€42,500')}${kpi('Liabilities','€8,200')}${kpi('Active Goals','3')}</div>${chart(H,P)}<p class="mu sm">Past (solid) · projected (dashed)</p></div><div class="pv" style="margin-top:12px">${bar('Emergency fund','62%',62)}${bar('Home deposit','28%',28)}</div>`;
+$('#p-tr').innerHTML=V.tr();$('#p-fp').innerHTML=V.fp();
+const ic=d=>`<span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg></span>`;
+$('#args').innerHTML=[['M12 3 3 8l9 5 9-5-9-5ZM3 12l9 5 9-5','Beyond spending','Your expenses are only one part of your financial life.'],['M4 20V10m6 10V4m6 16v-7m4 7H2','Understand your position','See how your assets, liabilities, income and expenses fit together.'],['M3 17l6-6 4 4 8-8m0 0h-5m5 0v5','Look beyond today','Understand your financial evolution, not just your latest balance.']].map(a=>`<div>${ic(a[0])}<div><h3>${a[1]}</h3><p class="mu">${a[2]}</p></div></div>`).join('');
+$('#tl').innerHTML=[['Understand your position.','Bring your financial information together and understand where you stand today.','fp'],['Explore your possibilities.','Adjust financial assumptions and explore how different decisions could shape your future.','sc'],['Plan around your goals.','Set personal goals, monitor your progress and adjust your plan over time.','go']].map((s,i)=>`<div class="st"><div class="nd">${i+1}</div><h3>${s[0]}</h3><p class="mu">${s[1]}</p>${V[s[2]]()}</div>`).join('');
+const F=[{k:'fs',t:'01 — FINANCIAL STATEMENTS',h:'Know your financial position.',d:'Organize income, expenses, assets and liabilities in one structured financial picture.'},{k:'an',t:'02 — ANALYTICS',h:'See the bigger picture.',d:'Visualize your financial evolution through historical data and key indicators.'},{k:'sc',t:'03 — SCENARIOS',h:'Explore what could happen.',d:'Adjust financial assumptions and explore different potential outcomes.'},{k:'go',t:'04 — GOALS',h:'Give your money a direction.',d:'Set personal objectives, define milestones and monitor your progress.'},{k:'si',t:'05 — SMART INPUT',h:'Spend less time entering data.',d:'Import financial information from supported files and documents.'}];
+$('#bento').innerHTML=F.map((f,i)=>`<article class="gl cd c${i+1}"><p class="lb" style="margin:0">${f.t}</p><h3>${f.h}</h3><p class="mu">${f.d}</p>${V[f.k]()}<span class="go" aria-hidden="true">Explore ↗</span><button class="ov" data-f="${i}" aria-label="Explore ${f.t.slice(5).toLowerCase()}"></button></article>`).join('');
+const HW=[['Build your profile.','Enter your financial information to create a structured picture of your current situation.','pf'],['Understand & simulate.','Explore your financial indicators, adjust assumptions and compare possible future scenarios.','sc'],['Track & adjust.','Monitor your progress, review your goals and update your plan as your situation evolves.','pa']];
+$('#hw').innerHTML=HW.map((s,i)=>`<div class="gl"><div class="nd">${i+1}</div><h3>${s[0]}</h3><p class="mu">${s[1]}</p>${V[s[2]]()}<button class="bt bs sm" data-s="${i}">View larger preview</button></div>`).join('');
+/* Waitlist */
+const wf=id=>`<form class="gl f wl" novalidate><label class="vh" for="${id}">Email address</label><input class="in" id="${id}" type="email" placeholder="Enter your email address" autocomplete="email" required><button class="bt" type="submit">Join Waitlist →</button></form><div class="er" role="alert"></div>`;
+$$('[data-wl]').forEach(m=>m.innerHTML=wf('em-'+m.dataset.wl));
+let S={email:'',name:''};
+const dlg=$('#dlg'),box=$('#dc');
+const show=(content,wide=false)=>{box.innerHTML='<button class="x" type="button" data-x aria-label="Close">×</button>'+content;dlg.classList.toggle('wide',wide);if(!dlg.open)dlg.showModal();};
+const toast=message=>{const el=$('#ts');el.textContent=t(message);el.classList.add('on');setTimeout(()=>el.classList.remove('on'),3200);};
+const reg=()=>show(`<h2 id="dt">Complete your registration</h2><p class="mu">Confirm your email and tell us a little about yourself.</p><form id="rf" novalidate><label>Email address<input class="in" name="e" type="email" autocomplete="email" value="${esc(S.email)}" required></label><span class="er" data-e="e"></span><label>Full name<input class="in" name="n" autocomplete="name" value="${esc(S.name)}" required></label><span class="er" data-e="n"></span><input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="er" id="se" role="alert"></div><button class="bt" type="submit">Submit registration</button><p class="mu sm">We only use these details to send you early access updates. <a href="#privacy" data-o="privacy">Privacy Policy</a></p></form>`);
+const done=duplicate=>show(`<div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div><p class="lb">${duplicate?'ALREADY REGISTERED':'REGISTRATION CONFIRMED'}</p><h2 id="dt">${duplicate?'You’re already on the list!':'You’re officially on the list!'}</h2><p class="mu">${duplicate?'Your place is already secured. Stay connected with the Avantcast community while we prepare what comes next.':'Welcome to Avantcast! You’re one step closer to taking control of your financial future. We’ll keep you updated on early access.'}</p><div class="sb"><span class="lb">REGISTERED EMAIL</span><br>${esc(S.email)}</div><div class="community"><p class="lb">COMMUNITY</p><h3>Don't just follow the journey. Be part of it.</h3><p class="mu sm">Join the Avantcast Discord to connect with other people interested in personal finance, share ideas, discuss features and follow the product's development.</p><a class="bt discord" href="https://discord.gg/xYwfk9WtC8" target="_blank" rel="noopener noreferrer">Join the Avantcast Discord ↗</a><p class="mu sm">Free to join · Be part of the early community</p></div><div class="success-actions"><button class="bt" data-x type="button">Continue exploring Avantcast →</button></div>`);
+const fieldError=(name,msg)=>{const input=$(`#rf [name="${name}"]`),out=$(`[data-e="${name}"]`);input.setAttribute('aria-invalid',msg?'true':'false');out.textContent=msg?'⚠ '+msg:'';};
+const info={
+about:['About Avantcast','<p class="mu">Avantcast is a personal finance planning platform currently in early access. It helps you bring your financial picture together, explore possible outcomes and plan around your own goals.</p><p class="mu">Join the waitlist to get early access updates.</p>'],
+privacy:['Privacy Policy','<p class="sm mu">Placeholder text. Replace this with a reviewed privacy policy before launch.</p><h3>What we collect</h3><p class="mu">Your email address and full name, only when you join the waitlist.</p><h3>Why</h3><p class="mu">To send you updates about early access to Avantcast.</p><h3>Your choices</h3><p class="mu">You can request access to or deletion of your details by contacting Avantcast.</p>'],
+terms:['Terms','<p class="sm mu">Placeholder text. Replace this with reviewed terms before launch.</p><p class="mu">Avantcast is in early access. Interfaces, figures and projections shown on this page are illustrative. They are not financial advice and do not guarantee any outcome.</p>']
+};
+const join=()=>{if(dlg.open)dlg.close();const input=$('#em-h');input.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>input.focus({preventScroll:true}),450);};
+document.addEventListener('submit',async event=>{
+ const form=event.target;if(!form.matches('form'))return;event.preventDefault();
+ if(form.classList.contains('wl')){
+   const input=$('input',form),email=input.value.trim().toLowerCase(),error=form.nextElementSibling;
+   const msg=!email?'Enter your email address.':!EM(email)?'Enter a valid email address, like name@example.com.':'';
+   input.setAttribute('aria-invalid',msg?'true':'false');error.textContent=msg?'⚠ '+msg:'';
+   if(!msg){S.email=email;reg();}else input.focus();return;
+ }
+ if(form.id==='rf'){
+   const email=form.e.value.trim().toLowerCase(),name=form.n.value.trim();S={email,name};
+   fieldError('e',!email?'Email address is required.':!EM(email)?'Enter a valid email address.':'');
+   fieldError('n',name.length<2?'Please enter your full name.':'');
+   if(!EM(email)||name.length<2){$('#rf [aria-invalid="true"]').focus();return;}
+   if(form.hp.value)return;
+   const button=$('button[type="submit"]',form);button.disabled=true;button.classList.add('ld');button.textContent='Saving';$('#se').textContent='';
+   try{
+     if(!db)throw new Error('Firebase is unavailable');
+     await db.collection('waitlist').add({name,email,timestamp:firebase.firestore.FieldValue.serverTimestamp()});
+     done(false);S.name='';$$('form.wl input').forEach(input=>input.value='');
+   }catch(error){console.error('Waitlist submission:',error);button.disabled=false;button.classList.remove('ld');button.textContent='Submit registration';$('#se').textContent='⚠ Something went wrong while saving. Please try again.';}
+ }
+ if(form.id==='cf'){
+   const email=form.a.value.trim(),message=form.m.value.trim();
+   $('[data-e="a"]').textContent=EM(email)?'':'⚠ Enter a valid email address.';
+   $('[data-e="m"]').textContent=message.length<5?'⚠ Write a short message.':'';
+   if(!EM(email)||message.length<5)return;
+   const subject=encodeURIComponent('Avantcast website enquiry'),body=encodeURIComponent(`From: ${email}\n\n${message}`);
+   window.location.href=`mailto:?subject=${subject}&body=${body}`;
+ }
+});
+document.addEventListener('input',event=>{
+ const el=event.target;
+ if(el.closest('#rf')&&(el.name==='e'||el.name==='n'))fieldError(el.name,'');
+ if(el.closest('form.wl')){el.setAttribute('aria-invalid','false');el.closest('form').nextElementSibling.textContent='';}
+ if(el.id==='sl'){
+   const monthly=+el.value,rate=.03/12,growth=Math.pow(1+rate,120),future=Math.round(34300*growth+monthly*(growth-1)/rate),delta=(monthly-500)/22;
+   $('#sv',dlg).textContent='€'+monthly;$('#sw',dlg).innerHTML=chart(H,P.map(v=>Math.min(96,v+delta)),[60,63,66,69]);
+   $('#sn',dlg).textContent='Illustrative balance in 10 years: €'+future.toLocaleString('en-US')+'. Assumes a 3% annual return — a simulation, not a forecast.';
+ }
+});
+document.addEventListener('click',event=>{
+ const target=event.target.closest('[data-o],[data-f],[data-s],[data-j],[data-x],[data-per],#mb,nav a');if(!target)return;
+ if(target.matches('nav a,#mb')){const header=$('#hd');if(target.id==='mb'){const open=header.classList.toggle('o');target.setAttribute('aria-expanded',String(open));target.setAttribute('aria-label',open?'Close menu':'Open menu');return;}header.classList.remove('o');$('#mb').setAttribute('aria-expanded','false');}
+ if(target.hasAttribute('data-x')){dlg.close();return;}
+ if(target.hasAttribute('data-j')){event.preventDefault();join();return;}
+ if(target.dataset.o){
+   event.preventDefault();const key=target.dataset.o;
+   if(key==='contact'){show(`<h2 id="dt">Contact</h2><p class="mu">Questions or feedback? Send us a message.</p><form id="cf" novalidate><label>Email address<input class="in" name="a" type="email" autocomplete="email"></label><span class="er" data-e="a"></span><label>Message<textarea class="in" name="m"></textarea></label><span class="er" data-e="m"></span><button class="bt" type="submit">Send message</button></form>`);}
+   else if(info[key])show(`<h2 id="dt">${info[key][0]}</h2>${info[key][1]}<button class="bt" data-x type="button" style="justify-self:start">Close</button>`);
+   return;
+ }
+ if(target.dataset.f!==undefined){const item=F[Number(target.dataset.f)];show(`<p class="lb" style="margin:0">${item.t}</p><h2 id="dt">${item.h}</h2><p class="mu">${item.d}</p>${V[item.k](true)}<p class="mu sm">Illustrative interface and data. Not a representation of a live account.</p><button class="bt" data-j type="button" style="justify-self:start">Join Waitlist →</button>`,true);return;}
+ if(target.dataset.s!==undefined){const item=HW[Number(target.dataset.s)];show(`<p class="lb" style="margin:0">STEP ${Number(target.dataset.s)+1} OF 3</p><h2 id="dt">${item[0]}</h2><p class="mu">${item[1]}</p>${V[item[2]](true)}<p class="mu sm">Illustrative interface and data. Projections depend on the assumptions you enter.</p><button class="bt" data-j type="button" style="justify-self:start">Join Waitlist →</button>`,true);return;}
+ if(target.dataset.per){const years=Number(target.dataset.per);$$('[data-per]',dlg).forEach(button=>button.setAttribute('aria-pressed',String(button===target)));$('.an .cw',dlg).innerHTML=chart(H.slice(-(years===1?4:years===3?7:10)));}
+});
+dlg.addEventListener('click',event=>{if(event.target===dlg)dlg.close();});
+const header=$('#hd');addEventListener('scroll',()=>header.classList.toggle('s',scrollY>8),{passive:true});
+if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}}),{threshold:.25});io.observe($('#tl'));}else $('#tl').classList.add('in');
+/* Hide loader even if a remote dependency fails. */
+const hideLoader=()=>setTimeout(()=>$('#loader')?.classList.add('done'),450);
+if(document.readyState==='complete')hideLoader();else addEventListener('load',hideLoader,{once:true});
+setTimeout(hideLoader,3500);
+})();
+</script>
+</body>
+</html>
